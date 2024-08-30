@@ -7,7 +7,7 @@ public class numberVowels {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         System.out.print("Type the string: ");
-        String s = input.next();
+        String s = input.nextLine();
         int ans = 0;
         for (int i = 0; i < s.length(); i ++) {
             if (vowels.contains(Character.toString(s.charAt(i)))){ans ++;}
