@@ -24,7 +24,9 @@ public class BirthdayParadox {
             double result;
             double numberOfTries = 10000;
             for (int j = 0; j < numberOfTries; j++) {
-                if (!Distinct.distinct(toIntegerArray(birthdayGenerator(5 * i)))) {
+                int[] birthdays = birthdayGenerator(5*i);
+                Integer[] goodBirthdays = toIntegerArray(birthdays);
+                if (!Distinct.distinct(goodBirthdays)) {
                     occurrences += 1;
                 }
             }

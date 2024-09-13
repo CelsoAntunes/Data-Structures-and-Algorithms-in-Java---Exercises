@@ -111,7 +111,7 @@ public class RandomMistakes {
 
     public static int whichIndex(@NotNull String sentence) {
         char[] letters = sentence.toCharArray();
-        int randomIndex = ThreadLocalRandom.current().nextInt(0,letters.length);
+        int randomIndex = ThreadLocalRandom.current().nextInt(0,letters.length-1);
         if (letters[randomIndex] == ' ') {
             randomIndex += 1;
         }
