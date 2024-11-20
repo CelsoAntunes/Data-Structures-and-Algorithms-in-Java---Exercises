@@ -30,6 +30,6 @@ public class DotProduct {
             b[i]=c;
         }
 
-        System.out.print(dotProduct(a,b));
+        System.out.println(dotProduct(a,b));
     }
 }

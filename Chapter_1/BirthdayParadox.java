@@ -1,7 +1,7 @@
 package DataStructuresAndAlgorithmsInJava_Exercises.Chapter_1;
 
-import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
+import static DataStructuresAndAlgorithmsInJava_Exercises.Chapter_1.Distinct.distinct;
 
 public class BirthdayParadox {
     public static int[] birthdayGenerator(int number) {
@@ -26,7 +26,7 @@ public class BirthdayParadox {
             for (int j = 0; j < numberOfTries; j++) {
                 int[] birthdays = birthdayGenerator(5*i);
                 Integer[] goodBirthdays = toIntegerArray(birthdays);
-                if (!Distinct.distinct(goodBirthdays)) {
+                if (!distinct(goodBirthdays)) {
                     occurrences += 1;
                 }
             }
@@ -37,7 +37,7 @@ public class BirthdayParadox {
         double result;
         double numberOfTries = 10000;
         for (int j = 0; j < numberOfTries; j++) {
-            if (!Distinct.distinct(toIntegerArray(birthdayGenerator(22)))) {
+            if (!distinct(toIntegerArray(birthdayGenerator(22)))) {
                 occurrences += 1;
             }
         }
@@ -45,7 +45,7 @@ public class BirthdayParadox {
         System.out.println("For n = " + 22 + " we have the chance of: " + result + ", with " + numberOfTries + " tries.");
         occurrences = 0;
         for (int j = 0; j < numberOfTries; j++) {
-            if (!Distinct.distinct(toIntegerArray(birthdayGenerator(23)))) {
+            if (!distinct(toIntegerArray(birthdayGenerator(23)))) {
                 occurrences += 1;
             }
         }
