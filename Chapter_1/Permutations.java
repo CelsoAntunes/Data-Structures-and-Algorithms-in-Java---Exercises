@@ -10,14 +10,13 @@ public class Permutations {
             result.add(new String(s));
         } else {
             for (int i = start; i < s.length; i++) {
-                swap(s, start, i);  // Swap current element with the starting element
-                generatePermutations(s, start + 1, result);  // Recur for the next position
-                swap(s, start, i);  // Backtrack: swap the elements back
+                swap(s, start, i); 
+                generatePermutations(s, start + 1, result); 
+                swap(s, start, i); 
             }
         }
     }
 
-    // Helper method to swap two elements in the array
     private static void swap(char[] arr, int i, int j) {
         char temp = arr[i];
         arr[i] = arr[j];
